@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .process_section {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            align-items: center;
+            justify-content: start;
+            justify-items: center;
+            gap: 40px;
+            margin: 0 auto;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+        }
+
+        .process_link {
+            cursor: pointer;
+        }
+
+        .process_details h4 {
+            font-weight: 300;
+            margin-top: 0;
+            font-size: 30px;
+            color: #000;
+        }
+
+        .process_details h5 {
+            color: #27AAE1;
+            padding-bottom: 0px;
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .process_details p {
+            line-height: 1.6em;
+            font-size: 18px;
+            font-weight: 200 !important;
+            color: #000;
+        }
+
+        .image_process img {
+            width: 100%;
+            max-width: 580px;
+        }
+
+        .process_details.show {
+            display: block;
+        }
+
+        .process_details.hide {
+            display: none;
+        }
+
+        .image_description {
+            width: 100%;
+        }
+
+        @media screen and (min-width: 981px) {
+            .process_section {
+                grid-template-columns: 580px calc(100% - 580px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="process_section">
+        <div class="image_process">
+            <img decoding="async" class="process_map"
+                src="https://tsbplumbing.com.au/wp-content/uploads/2024/10/process_wheel1.png" usemap="#image-map">
+            <map name="image-map">
+                <area target="" alt="" class="process_link" title="" id="p1"
+                    coords="52,145,130,67,224,27,301,13,340,81,301,155,240,170,168,227,133,151" shape="poly">
+                <area target="" alt="" class="process_link" title="" id="p2"
+                    coords="326,25,421,55,519,155,487,209,414,212,325,145,359,90" shape="poly">
+                <area target="" alt="" class="process_link" title="" id="p3"
+                    coords="430,236,502,246,535,178,559,337,532,419,460,420,424,361,444,307" shape="poly">
+                <area target="" alt="" class="process_link" title="" id="p4"
+                    coords="409,382,439,443,510,452,408,537,298,564,267,503,296,443,360,430" shape="poly">
+                <area target="" alt="" class="process_link" title="" id="p5"
+                    coords="264,568,219,505,268,444,162,378,91,378,57,438,109,500,174,541" shape="poly">
+                <area target="" alt="" class="process_link" title="" id="p6"
+                    coords="45,403,22,327,27,233,54,171,118,167,154,229,140,293,150,347,80,339" shape="poly">
+            </map>
+        </div>
+        <div class="image_description">
+            <div class="process_details process1">
+                <h5>Step 1</h5>
+                <h4>Initial Contact</h4>
+                <p>Whether you contact us by phone, email or online job card, we will take the time to understand your
+                    project and listen to you concerns.</p>
+            </div>
+            <div class="process_details process2 hide">
+                <h5>Step 2</h5>
+                <h4>Determine Job Status</h4>
+                <p>After our initial correspondence we can determine if your specific job can be completed as a charge
+                    up or it will need a site inspection and quote.</p>
+            </div>
+            <div class="process_details process3 hide">
+                <h5>Step 3</h5>
+                <h4>Organise Quote</h4>
+                <p>We will provide you with a detailed quote which will clearly state the inclusion and exclusion.</p>
+            </div>
+            <div class="process_details process4 hide">
+                <h5>Step 4</h5>
+                <h4>Finalise Start Date, Discuss Job & Pay Deposit</h4>
+                <p>TSB will contact you via phone or email to secure a date & time that suits your schedule to start
+                    works.</p>
+            </div>
+            <div class="process_details process5 hide">
+                <h5>Step 5</h5>
+                <h4>Completed Job</h4>
+                <p>Throughout the project, our team will provide transparent communication from beginning to end,
+                    including the time the job is set to be completed.
+                    We will always provide the highest-quality workmanship, ensuring a smooth experience. Any final
+                    changes or adjustments are discussed.</p>
+            </div>
+            <div class="process_details process6 hide">
+                <h5>Step 6</h5>
+                <h4>Handover</h4>
+                <p>Upon completion and final payment , we can provide a handover inspection walk through if desired.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        /*****PROCESS PART 1*****/
+        jQuery('#p1').click(function () {
+            jQuery(".process_map").attr("src", "https://tsbplumbing.com.au/wp-content/uploads/2024/10/process_wheel1.png");
+            jQuery(".process1").removeClass("hide");
+            jQuery(".process2").removeClass("show");
+            jQuery(".process3").removeClass("show");
+            jQuery(".process4").removeClass("show");
+            jQuery(".process5").removeClass("show");
+            jQuery(".process6").removeClass("show");
+
+            jQuery(".process1").addClass("show");
+            jQuery(".process2").addClass("hide");
+            jQuery(".process3").addClass("hide");
+            jQuery(".process4").addClass("hide");
+            jQuery(".process5").addClass("hide");
+            jQuery(".process6").addClass("hide");
+        });
+        /*****END PROCESS PART 1*****/
+
+        /*****PROCESS PART 2*****/
+        jQuery('#p2').click(function () {
+            jQuery(".process_map").attr("src", "https://tsbplumbing.com.au/wp-content/uploads/2024/10/process_wheel2.png");
+            jQuery(".process1").removeClass("show");
+            jQuery(".process2").removeClass("hide");
+            jQuery(".process3").removeClass("show");
+            jQuery(".process4").removeClass("show");
+            jQuery(".process5").removeClass("show");
+            jQuery(".process6").removeClass("show");
+
+            jQuery(".process1").addClass("hide");
+            jQuery(".process2").addClass("show");
+            jQuery(".process3").addClass("hide");
+            jQuery(".process4").addClass("hide");
+            jQuery(".process5").addClass("hide");
+            jQuery(".process6").addClass("hide");
+        });
+        /*****END PROCESS PART 2*****/
+
+        /*****PROCESS PART 3*****/
+        jQuery('#p3').click(function () {
+            jQuery(".process_map").attr("src", "https://tsbplumbing.com.au/wp-content/uploads/2024/10/process_wheel3.png");
+            jQuery(".process1").removeClass("show");
+            jQuery(".process2").removeClass("show");
+            jQuery(".process3").removeClass("hide");
+            jQuery(".process4").removeClass("show");
+            jQuery(".process5").removeClass("show");
+            jQuery(".process6").removeClass("show");
+
+            jQuery(".process1").addClass("hide");
+            jQuery(".process2").addClass("hide");
+            jQuery(".process3").addClass("show");
+            jQuery(".process4").addClass("hide");
+            jQuery(".process5").addClass("hide");
+            jQuery(".process6").addClass("hide");
+        });
+        /*****END PROCESS PART 3*****/
+
+        /*****PROCESS PART 4*****/
+        jQuery('#p4').click(function () {
+            jQuery(".process_map").attr("src", "https://tsbplumbing.com.au/wp-content/uploads/2024/10/process_wheel4.png");
+            jQuery(".process1").removeClass("show");
+            jQuery(".process2").removeClass("show");
+            jQuery(".process3").removeClass("show");
+            jQuery(".process4").removeClass("hide");
+            jQuery(".process5").removeClass("show");
+            jQuery(".process6").removeClass("show");
+
+            jQuery(".process1").addClass("hide");
+            jQuery(".process2").addClass("hide");
+            jQuery(".process3").addClass("hide");
+            jQuery(".process4").addClass("show");
+            jQuery(".process5").addClass("hide");
+            jQuery(".process6").addClass("hide");
+        });
+        /*****END PROCESS PART 4*****/
+
+        /*****PROCESS PART 5*****/
+        jQuery('#p5').click(function () {
+            jQuery(".process_map").attr("src", "https://tsbplumbing.com.au/wp-content/uploads/2024/10/process_wheel5.png");
+            jQuery(".process1").removeClass("show");
+            jQuery(".process2").removeClass("show");
+            jQuery(".process3").removeClass("show");
+            jQuery(".process4").removeClass("show");
+            jQuery(".process5").removeClass("hide");
+            jQuery(".process6").removeClass("show");
+
+            jQuery(".process1").addClass("hide");
+            jQuery(".process2").addClass("hide");
+            jQuery(".process3").addClass("hide");
+            jQuery(".process4").addClass("hide");
+            jQuery(".process5").addClass("show");
+            jQuery(".process6").addClass("hide");
+
+        });
+        /*****END PROCESS PART 5*****/
+
+        /*****PROCESS PART 6*****/
+        jQuery('#p6').click(function () {
+            jQuery(".process_map").attr("src", "https://tsbplumbing.com.au/wp-content/uploads/2024/10/process_wheel6.png");
+            jQuery(".process1").removeClass("show");
+            jQuery(".process2").removeClass("show");
+            jQuery(".process3").removeClass("show");
+            jQuery(".process4").removeClass("show");
+            jQuery(".process5").removeClass("show");
+            jQuery(".process6").removeClass("hide");
+
+            jQuery(".process1").addClass("hide");
+            jQuery(".process2").addClass("hide");
+            jQuery(".process3").addClass("hide");
+            jQuery(".process4").addClass("hide");
+            jQuery(".process5").addClass("hide");
+            jQuery(".process6").addClass("show");
+
+        });
+        /*****END PROCESS PART 6*****/
+
+        /*****INTERACTIVE PROCESS WHEEL [MOBILE RES]*****/
+        jQuery(document).ready(function () {
+            if (jQuery(window).width() < 468) {
+                jQuery("area").each(function () {
+                    var pairs = jQuery(this).attr("coords").split(', ');
+                    for (var i = 0; i < pairs.length; i++) {
+                        var nums = pairs[i].split(',');
+                        for (var j = 0; j < nums.length; j++) {
+                            nums[j] = parseFloat(nums[j]) / 1.4941176;
+                        }
+                        pairs[i] = nums.join(',');
+                    }
+                    jQuery(this).attr("coords", pairs.join(', '));
+                });
+            }
+        });
+        /*****END INTERACTIVE PROCESS WHEEL [MOBILE RES]*****/
+    </script>
+</body>
+
+</html>
